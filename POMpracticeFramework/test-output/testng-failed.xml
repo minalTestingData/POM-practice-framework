@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="10">
+  <listeners>
+    <listener class-name="utils.SuitListner"/>
+    <listener class-name="utils.MyAnnotation"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Automation Test(failed)" verbose="10">
+    <parameter name="browserName" value="chrome"/>
+    <classes>
+      <class name="BaseTest.SampleTest">
+        <methods>
+          <include name="TestRunMethod"/>
+          <include name="BeforeTestMethod"/>
+          <include name="BeforeMethodMethod"/>
+          <include name="AfterMethodMethod"/>
+          <include name="AfterTestMethod"/>
+        </methods>
+      </class> <!-- BaseTest.SampleTest -->
+    </classes>
+  </test> <!-- Automation Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
